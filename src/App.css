@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Inconsolata", monospace;
+}
+body{
+    /* background-color: black; */
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,9,121,1) 99%, rgba(0,0,0,1) 100%);
+    color: white;
+}
+/* Navbar  */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+nav h2{
+    color: rgb(255,255,255, 0.8);
+    text-shadow: -2px 2px 10px rgba(255,255,255,1);
+    cursor: pointer;
+}
+nav h2:hover{
+    color: rgb(255,255,255, 1);
+    text-shadow: -2px 2px 23px rgba(255,255,255,1);
+}
+
+
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    margin-right: o;
+}
+nav li{
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    cursor: pointer;
+    transition-duration: 0.7s;
+}
+nav ul li::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(52, 216, 11);
+    height: 2px;
+    transition-duration: 0.5s;
+    transition-delay: 0.5s;
+    
+
+}
+nav ul li::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    background-color: red;
+    height: 2px;
+    transition-duration: 0.5s;
+    transition-delay: 0.5s;
+    z-index: 99;
+}
+nav li:hover{
+    text-shadow: -2px 2px 10px rgba(255,255,255,1);
+}
+
+nav li:hover::before{
+    width: 2000%;
+    /* transition-delay: 0.5s; */
+}
+nav li:hover::after{
+    width: 100%;
+    /* transition-delay: 0; */
+
+}
+
+
+
+/*  */
+
+#about{
+    min-height: 100vh    ; 
+
+}
+
+#about h1{
+    width: 70%;
+    margin: 0 auto;
+    font-style: oblique;
+    font-weight: normal;
+}
+
+.profile-pic{
+    margin: 50px auto 20px auto;
+    text-align:center;
+}
+.profile-pic img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.position{
+    text-align: center;
+    margin: 0 auto 100px auto;
+}
+.position span{
+    margin: 0 20px;
+    color: rgb(52, 216, 11);
+    padding: 3px;
+}
+.position span:hover{
+    border-bottom: 2px solid rgb(52, 216, 11);
+    cursor: pointer;
+}
+
+/*  */
+
+.heading{
+    font-weight: bold;
+    /* font-size: 50px; */
+    margin: 70px auto;
+    text-align: center;
+}
+
+/* Tech Stack  */
+
+#tech-stack{
+    min-height: 100vh;
+}
+
+.tech-container{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+.tech-container .tech-card{
+    border: 2px solid wheat;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    backdrop-filter: blur(20px);
+    background: rgb(255,255,255, 0.1);
+    cursor: pointer;
+}
+.tech-card:hover{
+    background: rgb(255,255,255, 0.2);
+}
+
+.tech-container .tech-card img{
+    width: 120px;
+    margin: 10px;
+}
+
+
+
+/* Project Gallery */
+
+
+#project-gallery{
+    margin: 100px 0;
+}
+.gallery{
+    text-align: center;
+    width: 80%;
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery h2{
+    margin: 10vw;
+    position: relative;
+    
+}
+.gallery h2::after{
+    content: "";
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    clip-path: polygon(100% 47%, 0 0, 0 100%);
+    background-color: green;
+    display: none;
+}
+.gallery h2:hover::after{
+    display: block;
+}
+
+.gallery div{
+    cursor: pointer;
+}
+
+.gallery h2:nth-child(2)::after{
+    content: "";
+    position: absolute;
+    left: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    clip-path: polygon(100% 47%, 0 0, 0 100%);
+    background-color: green;
+    display: none;
+    clip-path: polygon(100% 100%, 100% 0, 0 52%);
+}
+.gallery h2:nth-child(2):hover::after{
+    display: block;
+}
+
+
+
+/* Contact */
+
+#contact {
+    min-height: 50vh;
+
+
+}
+
+#contact a{
+    color: white;
+}
+.contact-container{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.contact-card{
+    height: 50px;
+    color: white;
+    
+}
+.contact-card i{
+    margin-right: 10px;
+}
+.contact-card:hover{
+    /* border-bottom: 1px solid white; */
+    text-shadow: -2px 2px 10px rgba(255,255,255,1);
+}
