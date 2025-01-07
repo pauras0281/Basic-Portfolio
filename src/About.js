@@ -1,7 +1,7 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect';
 import ylogo from './utils/ylogo3.jpeg'
-import ProfilePhoto from './Profile Photo.png'
+import cartoonProfile from './cartoon-profile.jpg'
 
 const About = () => {
   return (
